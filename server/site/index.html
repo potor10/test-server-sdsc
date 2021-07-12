@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<!--
+  Clown Test
+-->
+<html>
+  <head>
+    <title>Server | Testpage</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="shortcut icon" href="/assets/images/genius.png" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Megrim&display=swap" rel="stylesheet">
+
+    <!-- Blocked Script Browsers -->
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  
+  <body>
+    <div id="canvas"></div>
+    <div id="info">
+      <h1>This is a clicking game!</h1>
+      <p>Click on the button</p>
+    </div>
+    <div id="score">
+      <p id="points">Score: 0</p>
+      <p id="time">Time: 10</p>
+    </div>
+    <div id="leaderboard">
+      <ol id="leaderboardList">
+        <li>josh</li>
+        <li>josh</li>
+        <li>josh</li>
+        <li>josh</li>
+        <li>josh</li>
+      </ol>
+      <div class="form">
+        <p id="total">Your Score: 0</p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <button onclick="submitScore()">
+          <p>Submit</p>
+        </button>
+      </div>
+    </div>
+    <button id="clickButton" onclick="getRandom()">
+      <p>Click Me!</p>
+    </button>
+    <script type="text/javascript" src="/assets/js/request.js"></script>
+  </body>
+</html>

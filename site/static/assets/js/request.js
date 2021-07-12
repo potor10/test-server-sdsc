@@ -19,6 +19,11 @@ let timer = 10;
 let score = 0;
 let game = false;
 
+let localhost = 'http://localhost:1337/';
+if (process.env.PORT) {
+  localhost = 'https://test-server-r.herokuapp.com/';
+}
+
 function resetAll() {
   document.getElementById('info').style.display = 'inline-block';
   document.getElementById('clickButton').style.display = 'inline-block';
@@ -69,7 +74,7 @@ function updateTime(time) {
 }
 
 async function getRandom() {
-  post('http://localhost:1337/', { command: 'random' })
+  post(localhost, { command: 'random' })
   .then(data => {
     console.log(data); // JSON data parsed by `data.json()` call
     if (!game) {
@@ -85,7 +90,7 @@ async function getRandom() {
 
 async function submitScore() {
   let name = document.getElementById('name').value;
-  post('http://localhost:1337/', { command: 'submit', name: name, score: score })
+  post(localhost, { command: 'submit', name: name, score: score })
   .then(data => {
     console.log(data); // JSON data parsed by `data.json()` call
     resetAll();
@@ -93,7 +98,7 @@ async function submitScore() {
 }
 
 async function getScores() {
-  post('http://localhost:1337/', { command: 'getscore' })
+  post(localhost, { command: 'getscore' })
   .then(data => {
     console.log(data); // JSON data parsed by `data.json()` call
 

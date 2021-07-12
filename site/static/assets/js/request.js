@@ -19,10 +19,8 @@ let timer = 10;
 let score = 0;
 let game = false;
 
-let localhost = 'http://localhost:1337/';
-if (process.env.PORT) {
-  localhost = 'https://test-server-r.herokuapp.com/';
-}
+//let localhost = 'http://localhost:1337/';
+let localhost = 'http://test-server-r.herokuapp.com/';
 
 function resetAll() {
   document.getElementById('info').style.display = 'inline-block';

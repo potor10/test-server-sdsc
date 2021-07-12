@@ -46,6 +46,6 @@ db.serialize(function() {
 db.close();
 
 const server = http.createServer(app)
-    .listen(port, () => {
+    .listen(process.env.PORT || port, () => {
         console.log('Running on http://localhost:' + port);
     });

@@ -1,6 +1,4 @@
-# Some Test Server
-
-### We do a little trolling
+# Test Server For SDSC RDS
 
 ## This is an example node.js app with a game hosted. 
 
